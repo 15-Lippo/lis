@@ -87,7 +87,7 @@ export default function VerticalNarbar() {
       {...props}
     >
       <Flex justifyContent="center" my="8">
-        <Image width={120} src="/multifylogo.png" alt="dexdash logo" />
+        <Image width={120} src="/Lisprocoin logo.png" alt="dexdash logo" />
       </Flex>
 
       <Flex
