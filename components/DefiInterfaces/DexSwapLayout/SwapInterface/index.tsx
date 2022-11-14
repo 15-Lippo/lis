@@ -15,7 +15,7 @@ export default function SwapInterface() {
 
   // Infura endpoint
   //const jsonRpcEndpoint = process.env.REACT_APP_RPC_ENDPOINT;
-  const jsonRpcEndpoint = "3ef17ef5bf7340ab9d97f938b3c4019c";
+  const jsonRpcEndpoint = "3f723d23-97d1-4b9e-9c90-8671e0ffc036";
 
   useEffect(() => {
     setEthereum(window.ethereum);
