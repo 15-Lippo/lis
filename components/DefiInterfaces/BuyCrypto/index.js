@@ -22,7 +22,7 @@ export default function BuyCrypto() {
           as="iframe"
           height="652"
           width="100%"
-          src="https://staging-global.transak.com?apiKey=b42f80c6-09e3-4995-a781-660fc5a2c8f4"
+          src="https://staging-global.transak.com?apiKey=3f723d23-97d1-4b9e-9c90-8671e0ffc036"
         />
       </Box>
     </Box>
