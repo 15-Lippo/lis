@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Box, Text } from "@chakra-ui/react";
 
 //API Key
-const API_KEY = "ckey_4e73d56514984838ab3206fbaf4";
+const API_KEY = "ckey_167eab964c91406eb344e305775";
 
 class Health extends Component {
   state = {
