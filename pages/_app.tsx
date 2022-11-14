@@ -7,7 +7,7 @@ import { InjectedConnector } from "wagmi/connectors/injected";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
 
-const alchemyId = "MxytU9m6WNzEsq_hIzXmbt_NW_rTOp1K";
+const alchemyId = "eSuujOEuvvJfIAbtfVd3BQET_xK_qc6n";
 
 const chains = defaultChains;
 const defaultChain = chain.mainnet;
