@@ -11,7 +11,7 @@ export default function Swapinterface() {
   return (
     <>
       <Head>
-        <title>Multify - Analytics DashDex </title>
+        <title>Lisprocoin - Analytics DashDex </title>
         <meta
           name="description"
           content="Multi-Chain Analytics Defi Dex Dashbord powered by Covalent Api: Bulit with Nextjs and Chakra UI"
