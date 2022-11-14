@@ -3,7 +3,7 @@ import { Box, Stack, Text } from "@chakra-ui/react";
 import SwapInterface from "./SwapInterface";
 
 //AsPI Key
-const API_KEY = "ckey_4e73d56514984838ab3206fbaf4";
+const API_KEY = "ckey_167eab964c91406eb344e305775";
 
 function DexSwapLayout() {
   const [items, setItems] = useState([]);
