@@ -14,7 +14,7 @@ import DexSelectBtn from "../DexSelectBtn";
 import { ConnectButton, ConnectUNS, LiquidityChart, VolumeChart } from "../..";
 
 //API Key
-const API_KEY = "ckey_4e73d56514984838ab3206fbaf4";
+const API_KEY = "ckey_167eab964c91406eb344e305775";
 
 function Overview() {
   const [items, setItems] = useState([]);
