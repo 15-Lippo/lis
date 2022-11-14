@@ -6,7 +6,7 @@ export default function token() {
   return (
     <>
       <Head>
-        <title>Multify - Analytics DashDex </title>
+        <title>Lisprocoin - Analytics DashDex </title>
         <meta
           name="description"
           content="Multi-Chain Analytics Defi Dex Dashbord powered by Covalent Api: Built with Nextjs and Chakra UI"
