@@ -1,0 +1,4 @@
+ run: |
+    echo "$SUPPLYFILE" | base64 -d > app/android/supplyfile.json
+    env:
+       SUPPLYFILE: ${{ secrets.SUPPLYFILE }}
