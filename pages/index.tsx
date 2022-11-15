@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>https.//www.lisprocoin.net  - Analytics DashDex </title>
+        <title>https://www.lisprocoin.net  - Analytics DashDex </title>
         <meta
           name="description"
           content="Multi-Chain Analytics Defi Dex Dashbord powered by Covalent Api: Built with Nextjs and Chakra UI"
