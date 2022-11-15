@@ -1,0 +1,70 @@
+fastlane_version '2.105.2'
+
+before_all do
+  ensure_git_branch
+  git_pull
+end
+
+platform :ios do
+    desc 'Fetch certificates and provisioning profiles'
+    lane :certificates do
+      match(
+        app_identifier: 'jonnyburger.anysticker',
+        type: 'appstore',
+        username: "jonathanburger11@gmail.com",
+        git_url: "https://github.com/JonnyBurger/fake-repository-with-ios-certificates",
+        team_id: "ABCDEFFHIJK",
+        skip_docs: true
+        )
+      end
+      
+      desc 'Build the iOS   application.'
+      private_lane :build do
+        certificates
+        increment_build_number(
+        xcodeproj: './ios/anysticker.xcodeproj',
+        build_number: latest_testflight_build_number(
+          username: 'circle@jonny.io',
+          team_name: "Jonathan Burger",
+          app_identifier: 'jonnyburger.anysticker'
+        ).to_i + 1
+      )
+      gym(
+        scheme: 'anysticker',
+        project: './ios/anysticker.xcodeproj',
+        configuration: "Release",
+        export_method: "app-store"
+      )
+    end
+
+    desc 'Ship to Testflight.'
+    lane :beta do
+      build
+      pilot(username: 'circle@jonny.io', team_name: "Jonathan Burger", skip_waiting_for_build_processing: true)
+    end
+
+    desc 'Build on CircleCI'
+    lane :ci do
+      setup_circle_ci
+      beta
+    end
+end
+
+platform :android do
+    desc 'Ship to Playstore Beta.'
+    lane :ci do
+      gradle(task: 'clean', project_dir: 'android/')
+      gradle(task: 'assemble', build_type: 'Release', project_dir: 'android/', properties: {
+        versionCode: [google_play_track_version_codes(
+          track: 'release',
+          json_key: 'android/supplyfile.json',
+          package_name: 'jonnyburger.anysticker',
+        ).max || 0, google_play_track_version_codes(
+          track: 'beta',
+          json_key: 'android/supplyfile.json',
+          package_name: 'jonnyburger.anysticker',
+        ).max || 0].max + 1
+      })
+      supply(track: 'beta', track_promote_to: 'beta', json_key: 'android/supplyfile.json', package_name: 'jonnyburger.anysticker')
+    end
+end
