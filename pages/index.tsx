@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Lisprocoin token bsc 0xE62A9bc6eDe534E18Dd2793Dcaf5A2B6df112180  - Analytics DashDex </title>
+        <title>https.//www.lisprocoin.net  - Analytics DashDex </title>
         <meta
           name="description"
           content="Multi-Chain Analytics Defi Dex Dashbord powered by Covalent Api: Built with Nextjs and Chakra UI"
