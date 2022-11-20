@@ -25,7 +25,6 @@ import { BsCurrencyBitcoin } from "react-icons/bs";
 import { RiExchangeDollarFill } from "react-icons/ri";
 import { AiOutlineMenu } from "react-icons/ai";
 import ConnectButton from "../../Buttons/ConnectButton";
-import ConnectUNS from "../../Buttons/ConnectUNS";
 
 export default function HorizontalNarbar() {
   const bg = useColorModeValue("white", "gray.800");
