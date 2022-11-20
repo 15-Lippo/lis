@@ -203,7 +203,6 @@ export default function HorizontalNarbar() {
             </HStack>
           </HStack>
           <HStack spacing={3} display={mobileNav.isOpen ? "none" : "flex"}>
-            <ConnectUNS />
             <ConnectButton />
             <Switch
               colorScheme="teal"
